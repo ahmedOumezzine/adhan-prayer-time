@@ -1,0 +1,669 @@
+<style>
+    container {
+        /* padding-top: 78px; */
+        width: 1050px;
+        margin: 0 auto;
+    }
+    
+    .row {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .large-4 {
+        width: 33.33%;
+        float: left;
+        padding-right: 13px;
+        padding-left: 18px;
+    }
+    
+    .large-2 {
+        width: 16.66667%;
+    }
+    
+    select {
+        padding: 0.5rem;
+        border: 1px solid #cacaca;
+        color: #0a0a0a;
+        background-color: #fefefe;
+        width: 100%;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .large-offset-4 {
+        margin-left: 33.33333%;
+        padding-top: 0.9375rem;
+    }
+    
+    .button {
+        min-width: 100px;
+        margin: 0;
+        background: #59BE82;
+        border: 2px solid #4fb478;
+        padding: 0.5em 1em 0.5em 1em;
+        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.5s ease;
+    }
+    
+    .circular {
+        border-radius: 3px !important;
+    }
+    
+   
+
+   #clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
+</style>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="app.css" rel="stylesheet">
+
+
+
+<!-- Today Prayers Card-->
+<div class="large-12 columns">
+    <div class="row">
+
+        <div class="large-12 columns box">
+            <div class="row titleContainer">
+                <div class="large-5 medium-12 small-12 columns"><span class="prayerTimesToday">Prayer times today</span></div>
+                <div class="large-7 medium-12 small-12 columns"><span class="dateToday">26 Shawwal, 1437 Hijri</span></div>
+            </div>
+            <div class="row upcomingPrayerContainer">
+
+
+
+
+
+                <div class="large-12 columns text-center"><span class="upcomingPrayerTitle">Upcoming Prayer</span></div>
+                <div id="" class="large-12 columns text-center"><span class="upcomingPrayerName">Asr </span> - 
+                    <div id="clockdiv">
+                        <div>
+                            <span class="hours"></span>
+                            <div class="smalltext">Hours</div>
+                        </div>
+                        <div>
+                            <span class="minutes"></span>
+                            <div class="smalltext">Minutes</div>
+                        </div>
+                        <div>
+                            <span class="seconds"></span>
+                            <div class="smalltext">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn-refresh" href="/" style="opacity: 1; display: initial;"><i class="fa fa-refresh"></i></a>
+            </div>
+            <div class="row todayPrayersContainer">
+                <div class="large-2 medium-2 small-2 columns todayPrayer">
+                    <div class="todayPrayerNameContainer"><span class="todayPrayerName">Fajr</span></div>
+                    <div class="todayPrayerDetailContainer"><span class="todayPrayerTime">03:44 AM</span></div>
+                </div>
+                <div class="large-2 medium-2 small-2 columns todayPrayer">
+                    <div class="todayPrayerNameContainer"><span class="todayPrayerName">Sunrise  </span></div>
+                    <div class="todayPrayerDetailContainer"><span class="todayPrayerTime">05:24 AM</span></div>
+                </div>
+                <div class="large-2 medium-2 small-2 columns todayPrayer">
+                    <div class="todayPrayerNameContainer"><span class="todayPrayerName">Dhuhr</span></div>
+                    <div class="todayPrayerDetailContainer"><span class="todayPrayerTime">12:26 PM</span></div>
+                </div>
+                <div class="large-2 medium-2 small-2 columns todayPrayer">
+                    <div class="todayPrayerNameContainer"><span class="todayPrayerName">Asr</span></div>
+                    <div class="todayPrayerDetailContainer"><span class="todayPrayerTime">04:15 PM</span></div>
+                </div>
+                <div class="large-2 medium-2 small-2 columns todayPrayer">
+                    <div class="todayPrayerNameContainer"><span class="todayPrayerName">Maghrib</span></div>
+                    <div class="todayPrayerDetailContainer"><span class="todayPrayerTime">07:27 PM</span></div>
+                </div>
+                <div class="large-2 medium-2 small-2 columns todayPrayer">
+                    <div class="todayPrayerNameContainer"><span class="todayPrayerName">Isha</span></div>
+                    <div class="todayPrayerDetailContainer"><span class="todayPrayerTime">09:01 PM</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="settingsContainer">
+                    <div><span><small>Calculation method</small></span><span>Muslim World League</span></div>
+                    <div><span><small>Juristic method</small></span><span>Standard</span></div>
+                    <div><span><small>Daylight saving</small></span><span>Auto</span></div>
+
+                    <div>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Change Settings</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="large-12 columns box">
+        <div class="row">
+            <div id="grey" class="large-12 column">
+                <h3>
+                    <i class="fa fa-map-marker"></i> Monthly prayer times in Ariana
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-controller">
+                <div class="headings">
+
+                    <h4 id="gregorianMonth">October 2016</h4>
+                    <p class="zero-margin">
+                        <green id="hijriMonth"><a href="/prayers/?providedDate=1472924155410&amp;type=Hijri"> Dhul Hijjah 1437</a> - <a href="/prayers/?providedDate=1475516155410&amp;type=Hijri"> Muharram 1438</a></green>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="monthly-prayer-slider" class="row scrollable">
+            <table id="monthly-prayers" class="text-center">
+                <tbody>
+                    <tr class="row-title">
+                        <td>October</td>
+                        <td>Dhul Hijjah</td>
+                        <td>Day</td>
+                        <td>Fajr</td>
+                        <td>Sunrise </td>
+                        <td>Dhuhr</td>
+                        <td>Asr</td>
+                        <td>Maghrib</td>
+                        <td>Isha</td>
+                    </tr>
+
+                    <tr class="row-body">
+                        <td>2</td>
+                        <td>1</td>
+                        <td>Sun</td>
+                        <td>04:51 AM</td>
+                        <td>06:15 AM</td>
+                        <td>12:09 PM</td>
+                        <td>03:28 PM</td>
+                        <td>06:01 PM</td>
+                        <td>07:22 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>3</td>
+                        <td>2</td>
+                        <td>Mon</td>
+                        <td>04:52 AM</td>
+                        <td>06:16 AM</td>
+                        <td>12:09 PM</td>
+                        <td>03:27 PM</td>
+                        <td>06:00 PM</td>
+                        <td>07:21 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>4</td>
+                        <td>3</td>
+                        <td>Tue</td>
+                        <td>04:53 AM</td>
+                        <td>06:17 AM</td>
+                        <td>12:08 PM</td>
+                        <td>03:26 PM</td>
+                        <td>05:58 PM</td>
+                        <td>07:19 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>5</td>
+                        <td>4</td>
+                        <td>Wed</td>
+                        <td>04:53 AM</td>
+                        <td>06:18 AM</td>
+                        <td>12:08 PM</td>
+                        <td>03:25 PM</td>
+                        <td>05:57 PM</td>
+                        <td>07:18 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>6</td>
+                        <td>5</td>
+                        <td>Thu</td>
+                        <td>04:54 AM</td>
+                        <td>06:19 AM</td>
+                        <td>12:08 PM</td>
+                        <td>03:24 PM</td>
+                        <td>05:55 PM</td>
+                        <td>07:16 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>7</td>
+                        <td>6</td>
+                        <td>Fri</td>
+                        <td>04:55 AM</td>
+                        <td>06:19 AM</td>
+                        <td>12:07 PM</td>
+                        <td>03:23 PM</td>
+                        <td>05:54 PM</td>
+                        <td>07:15 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>8</td>
+                        <td>7</td>
+                        <td>Sat</td>
+                        <td>04:56 AM</td>
+                        <td>06:20 AM</td>
+                        <td>12:07 PM</td>
+                        <td>03:22 PM</td>
+                        <td>05:53 PM</td>
+                        <td>07:13 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>9</td>
+                        <td>8</td>
+                        <td>Sun</td>
+                        <td>04:57 AM</td>
+                        <td>06:21 AM</td>
+                        <td>12:07 PM</td>
+                        <td>03:21 PM</td>
+                        <td>05:51 PM</td>
+                        <td>07:12 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>10</td>
+                        <td>9</td>
+                        <td>Mon</td>
+                        <td>04:58 AM</td>
+                        <td>06:22 AM</td>
+                        <td>12:07 PM</td>
+                        <td>03:20 PM</td>
+                        <td>05:50 PM</td>
+                        <td>07:10 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>11</td>
+                        <td>10</td>
+                        <td>Tue</td>
+                        <td>04:59 AM</td>
+                        <td>06:23 AM</td>
+                        <td>12:06 PM</td>
+                        <td>03:19 PM</td>
+                        <td>05:48 PM</td>
+                        <td>07:09 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>12</td>
+                        <td>11</td>
+                        <td>Wed</td>
+                        <td>04:59 AM</td>
+                        <td>06:24 AM</td>
+                        <td>12:06 PM</td>
+                        <td>03:18 PM</td>
+                        <td>05:47 PM</td>
+                        <td>07:08 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>13</td>
+                        <td>12</td>
+                        <td>Thu</td>
+                        <td>05:00 AM</td>
+                        <td>06:25 AM</td>
+                        <td>12:06 PM</td>
+                        <td>03:17 PM</td>
+                        <td>05:45 PM</td>
+                        <td>07:06 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>14</td>
+                        <td>13</td>
+                        <td>Fri</td>
+                        <td>05:01 AM</td>
+                        <td>06:26 AM</td>
+                        <td>12:06 PM</td>
+                        <td>03:16 PM</td>
+                        <td>05:44 PM</td>
+                        <td>07:05 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>15</td>
+                        <td>14</td>
+                        <td>Sat</td>
+                        <td>05:02 AM</td>
+                        <td>06:27 AM</td>
+                        <td>12:05 PM</td>
+                        <td>03:15 PM</td>
+                        <td>05:43 PM</td>
+                        <td>07:04 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>16</td>
+                        <td>15</td>
+                        <td>Sun</td>
+                        <td>05:03 AM</td>
+                        <td>06:27 AM</td>
+                        <td>12:05 PM</td>
+                        <td>03:14 PM</td>
+                        <td>05:41 PM</td>
+                        <td>07:02 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>17</td>
+                        <td>16</td>
+                        <td>Mon</td>
+                        <td>05:04 AM</td>
+                        <td>06:28 AM</td>
+                        <td>12:05 PM</td>
+                        <td>03:13 PM</td>
+                        <td>05:40 PM</td>
+                        <td>07:01 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>18</td>
+                        <td>17</td>
+                        <td>Tue</td>
+                        <td>05:05 AM</td>
+                        <td>06:29 AM</td>
+                        <td>12:05 PM</td>
+                        <td>03:12 PM</td>
+                        <td>05:39 PM</td>
+                        <td>07:00 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>19</td>
+                        <td>18</td>
+                        <td>Wed</td>
+                        <td>05:06 AM</td>
+                        <td>06:30 AM</td>
+                        <td>12:05 PM</td>
+                        <td>03:11 PM</td>
+                        <td>05:38 PM</td>
+                        <td>06:59 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>20</td>
+                        <td>19</td>
+                        <td>Thu</td>
+                        <td>05:06 AM</td>
+                        <td>06:31 AM</td>
+                        <td>12:04 PM</td>
+                        <td>03:10 PM</td>
+                        <td>05:36 PM</td>
+                        <td>06:58 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>21</td>
+                        <td>20</td>
+                        <td>Fri</td>
+                        <td>05:07 AM</td>
+                        <td>06:32 AM</td>
+                        <td>12:04 PM</td>
+                        <td>03:09 PM</td>
+                        <td>05:35 PM</td>
+                        <td>06:56 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>22</td>
+                        <td>21</td>
+                        <td>Sat</td>
+                        <td>05:08 AM</td>
+                        <td>06:33 AM</td>
+                        <td>12:04 PM</td>
+                        <td>03:08 PM</td>
+                        <td>05:34 PM</td>
+                        <td>06:55 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>23</td>
+                        <td>22</td>
+                        <td>Sun</td>
+                        <td>05:09 AM</td>
+                        <td>06:34 AM</td>
+                        <td>12:04 PM</td>
+                        <td>03:07 PM</td>
+                        <td>05:32 PM</td>
+                        <td>06:54 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>24</td>
+                        <td>23</td>
+                        <td>Mon</td>
+                        <td>05:10 AM</td>
+                        <td>06:35 AM</td>
+                        <td>12:04 PM</td>
+                        <td>03:06 PM</td>
+                        <td>05:31 PM</td>
+                        <td>06:53 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>25</td>
+                        <td>24</td>
+                        <td>Tue</td>
+                        <td>05:11 AM</td>
+                        <td>06:36 AM</td>
+                        <td>12:04 PM</td>
+                        <td>03:05 PM</td>
+                        <td>05:30 PM</td>
+                        <td>06:52 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>26</td>
+                        <td>25</td>
+                        <td>Wed</td>
+                        <td>05:12 AM</td>
+                        <td>06:37 AM</td>
+                        <td>12:04 PM</td>
+                        <td>03:04 PM</td>
+                        <td>05:29 PM</td>
+                        <td>06:51 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>27</td>
+                        <td>26</td>
+                        <td>Thu</td>
+                        <td>05:12 AM</td>
+                        <td>06:38 AM</td>
+                        <td>12:04 PM</td>
+                        <td>03:03 PM</td>
+                        <td>05:28 PM</td>
+                        <td>06:50 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>28</td>
+                        <td>27</td>
+                        <td>Fri</td>
+                        <td>05:13 AM</td>
+                        <td>06:39 AM</td>
+                        <td>12:03 PM</td>
+                        <td>03:02 PM</td>
+                        <td>05:27 PM</td>
+                        <td>06:49 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>29</td>
+                        <td>28</td>
+                        <td>Sat</td>
+                        <td>05:14 AM</td>
+                        <td>06:40 AM</td>
+                        <td>12:03 PM</td>
+                        <td>03:02 PM</td>
+                        <td>05:25 PM</td>
+                        <td>06:48 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>30</td>
+                        <td>29</td>
+                        <td>Sun</td>
+                        <td>05:15 AM</td>
+                        <td>06:41 AM</td>
+                        <td>12:03 PM</td>
+                        <td>03:01 PM</td>
+                        <td>05:24 PM</td>
+                        <td>06:47 PM</td>
+                    </tr>
+                    <tr class="row-body">
+                        <td>31</td>
+                        <td>30</td>
+                        <td>Mon</td>
+                        <td>05:16 AM</td>
+                        <td>06:42 AM</td>
+                        <td>12:03 PM</td>
+                        <td>03:00 PM</td>
+                        <td>05:23 PM</td>
+                        <td>06:46 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <div class="settingsContainer">
+                <div><span><small>Calculation method</small></span><span>Muslim World League</span></div>
+                <div><span><small>Juristic method</small></span><span>Standard</span></div>
+                <div><span><small>Daylight saving</small></span><span>Auto</span></div>
+
+                <div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Change Settings</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+<!-- Large modal -->
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <img  src="img/img-close.png" width="20">
+                </button>
+                <h4 class="modal-title" id="myLargeModalLabel">Change your preferences</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+
+                    <div class="large-4">
+                        <h5>
+                            Adjust Hijri date
+                        </h5>
+                        <select id="preferenceHijriAdjustement" name="preferenceHijriAdjustement">
+							<option>+2</option>
+							<option>+1</option>
+							<option selected="">0</option>
+							<option>-1</option>
+							<option>-2</option>
+						</select>
+                    </div>
+                    <div class="large-4">
+                        <h5>
+                            Juristic settings
+                        </h5>
+                        <select id="preferenceJuristicMethod" name="preferenceJuristicMethod">
+					
+						
+							<option value="1" selected="">Standard</option>
+							<option value="2">Hanafi</option>
+			            </select>
+                    </div>
+                    <div class="large-4">
+                        <h5>
+                            Calculation method
+                        </h5>
+                        <select id="preferenceCalculationMethod" name="preferenceCalculationMethod">
+                            <option value="1" selected="">Muslim World League</option>
+							<option value="2">Egyptian General Authority of Survey</option>
+							<option value="3">University Of Islamic Sciences, Karachi</option>
+							<option value="4">Umm Al-Qura</option>
+							<option value="5">North America</option>
+					</select>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="large-4 large-offset-4">
+                        <input type="submit" class="trigger-preferences button circular" value="Save &amp; Update">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  return {
+    'total': t,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) +  4 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+    </script>
